@@ -1,0 +1,139 @@
+# Source URL: https://gumroad.com/help/article/13-getting-paid
+# Content Length: 10313 characters
+# Extracted at: 2026-03-22 14:25:08
+#============================================================
+
+Getting paid by Gumroad - Gumroad Help Center
+# Help Center
+### Categories
+\* [Open an account](/help/category/316-open-an-account)
+\* [Add a product](/help/category/318-add-a-product)
+\* [Start selling](/help/category/319-start-selling)
+\* [Get paid](/help/category/320-get-paid)
+\* [Advanced](/help/category/321-advanced)
+\* [Contact Gumroad](/help/category/322-contact-gumroad)
+\* [Market your work](/help/category/328-market-your-work)
+## Getting paid by Gumroad
+\*\*In this article:\*\*
+\* [Payout modes](#payout-modes)
++ [Get paid to your bank account](#bank-account)
++ [Get paid to PayPal](#paypal)
+\* [Verification process](#Stripe-verification-process-ZFq5c)
+\* [Payout schedule](#schedule)
++ [Instant payouts](#instant-payouts)
+\* [Enable payments via PayPal](#paypal-connect)
+\* [The account review process](#review)
+### Payout modes
+We support direct bank deposits in the local currency for most countries. For countries where bank deposits are not available, we offer PayPal transfers as the only payment option.
+We do \*not\* support alternative payout modes like Payoneer, Wise, check, money order, wire transfer, etc. If your country is not supported by direct bank deposits or PayPal, then unfortunately, we have no way to pay you out for now.
+To get paid for your sales, start by filling out your [Payments Settings](https://gumroad.com/settings/payments).
+### Get paid to your bank account
+\*\*Note:\*\* Due to restrictions from our payment partners, you may have to forfeit your balance if you want to change your country in the future. Choose carefully!
+We currently support bank payouts in the following countries:
+| Country | Payout Currency | Country | Payout Currency |
+| --- | --- | --- | --- |
+| Albania | ALL (min 3,000) | Algeria | DZD |
+| Angola | AOA (min 23,000) | Antigua and Barbuda | XCD |
+| Argentina | ARS (min 4,600) | Armenia | AMD (min 12,100) |
+| Australia | AUD | Austria | EUR |
+| Azerbaijan | AZN (min 50) | Bahamas | BSD |
+| Bahrain | BHD | Bangladesh | BDT |
+| Belgium | EUR | Benin | XOF |
+| Bhutan | BTN (min 2,500) | Bolivia | BOB (min 200) |
+| Bosnia and Herzegovina | BAM (min 50) | Botswana | BWP |
+| Brunei | BND | Bulgaria | EUR |
+| Cambodia | KHR (min 123,000) | Canada | CAD |
+| Chile | CLP (min 23,000) | Colombia | COP (min 140,000) |
+| Costa Rica | CRC | Côte d'Ivoire | XOF |
+| Croatia | EUR | Cyprus | EUR |
+| Czech Republic | CZK | Denmark | DKK |
+| Dominican Republic | DOP | Ecuador | USD |
+| Egypt | EGP | El Salvador | USD (min 30) |
+| Estonia | EUR | Ethiopia | ETB |
+| Finland | EUR | France | EUR |
+| Gabon | XAF | Germany | EUR |
+| Ghana | GHS | Gibraltar | GBP |
+| Greece | EUR | Guatemala | GTQ |
+| Guyana | GYD (min 6,300) | Hong Kong | HKD |
+| Hungary | HUF | Iceland | EUR |
+| India | INR | Indonesia | IDR |
+| Ireland | EUR | Israel | ILS |
+| Italy | EUR | Jamaica | JMD |
+| Japan | JPY | Jordan | JOD |
+| Kazakhstan | KZT | Kenya | KES |
+| Korea | KRW (min 40,000) | Kuwait | KWD |
+| Laos | LAK (min 516,000) | Latvia | EUR |
+| Liechtenstein | CHF | Lithuania | EUR |
+| Luxembourg | EUR | Macao | MOP |
+| Madagascar | MGA (min 132,300) | Malaysia | MYR (min 133) |
+| Malta | EUR | Mauritius | MUR |
+| Mexico | MXN | Moldova | MDL (min 500) |
+| Monaco | EUR | Mongolia | MNT (min 105,000) |
+| Morocco | MAD | Mozambique | MZN (min 1,700) |
+| Namibia | NAD (min 550) | Netherlands | EUR |
+| New Zealand | NZD | Niger | XOF |
+| Nigeria | NGN | North Macedonia | MKD (min 1,500) |
+| Norway | NOK | Oman | OMR |
+| Pakistan | PKR | Panama | USD (min 50) |
+| Paraguay | PYG (min 210,000) | Peru | PEN |
+| Philippines | PHP | Poland | PLN |
+| Portugal | EUR | Qatar | QAR |
+| Romania | RON | Rwanda | RWF |
+| Saint Lucia | XCD | San Marino | EUR |
+| Saudi Arabia | SAR | Senegal | XOF |
+| Serbia | RSD (min 3,000) | Singapore | SGD |
+| Slovakia | EUR | Slovenia | EUR |
+| South Africa | ZAR | Spain | EUR |
+| Sri Lanka | LKR | Sweden | SEK |
+| Switzerland | CHF | Taiwan | TWD (min 800) |
+| Tanzania | TZS | Thailand | THB (min 600) |
+| Trinidad and Tobago | TTD | Tunisia | TND |
+| Turkey | TRY | UAE (Business accounts) | AED |
+| UK | GBP | Uruguay | UYU |
+| Uzbekistan | UZS (min 343,000) | Vietnam | VND |
+\*\*Note:\*\* Countries showing "(min X)" have a higher minimum payout threshold than the standard $10 USD requirement.
+We can only pay out to a local bank account and in your local currency. We cannot pay you out in USD if it is not listed above as your country's payout currency. All currency conversions happen based on the exchange rates at the time of sale, not at the time of the payout. These are typically mid-market rates that you can estimate [here](https://dashboard.stripe.com/currency\_conversion).
+For prompt payouts, please ensure that you have the following for your country of residence:
+\* A valid, government-issued photo ID
+\* Proof of residence within the country
+If you are selling as a business, the business must be registered in the same country. You cannot get paid to another country's bank account by just having a business registered in that country. You must physically live (and can prove residence) in that country.
+Depending on your country, bank payouts can take 2-7 business days to process, and can be delayed around bank holidays.
+### Get paid to PayPal
+If bank payouts aren't supported in your country, we will pay you via PayPal. You just need an individual or business PayPal account without any restrictions.
+All PayPal payouts are processed in USD and usually arrive within 1–3 business days.
+PayPal payouts have a 2% processing fee.
+### Verification process
+Our payment processor, Stripe, requires additional information to verify the identity of the account holder after a certain amount of time has passed and sales accrued. This is a standard practice in the financial industry and is part of their [Know Your Customer (KYC) obligations](https://support.stripe.com/questions/know-your-customer-obligations).
+### ID verification
+You can learn the correct documents needed for ID verification for your specific location [here](https://docs.stripe.com/connect/handling-api-verification?country=CA&document-type=identity#acceptable-verification-documents).
+### Address verification
+You can learn the correct documents needed for address verification for your specific location [here](https://docs.stripe.com/connect/handling-api-verification?country=CA&document-type=address#acceptable-verification-documents).
+### Social Security number (SSN)
+SSN is required for US sellers. The name and date of birth on your SSN must match exactly with the information filled in your [Payments Settings](https://gumroad.com/settings/payments). Refer to your social security card to see how your name is formatted, and enter your name in the settings exactly as it is on the card. If you have a middle name, you can add it to the First Name field on the settings page.
+If you don't have your Social Security card, or if you believe you've entered the correct information but still receive an error, please contact the Social Security Administration. You can request a copy of your card or update your name here: https://www.ssa.gov/ssnumber/
+### Payout schedule
+\*\*⚠️ You need a minimum balance of $10 USD to receive a payout.\*\* Some countries have higher local currency minimums—see the "(min X)" values in the [table above](#bank-account).
+You can choose to get paid daily, weekly, monthly, or quarterly, and set your own payout threshold. Daily payouts are only available for US users with eligible bank accounts and at least 4 prior payouts. You can also pause and resume payouts anytime.
+Payouts include sales made through the previous Friday (UTC). All sales have a minimum 7-day holding period in your Gumroad balance before they become eligible for payout.
+![](https://d33v4339jhl8k0.cloudfront.net/docs/assets/5c4657ad2c7d3a66e32d763f/images/63bb91fed851444a9b4d27ef/file-5kClaU1t2C.png)
+You can download a CSV report for each payout from the [Payouts dashboard](269-balance-page), which includes a breakdown of all [Gumroad fees](66-gumroads-fees) and customer data.
+### Instant payouts
+Creators from the US can get paid within minutes for amounts up to $10K and a 3% fee. Instant payouts are available only to creators from the US who have completed four payouts.
+If you are eligible for an instant payout, you will see the option to get paid instantly on your [Payouts dashboard](https://gumroad.com/payouts).
+Not all debit cards are eligible for instant payouts. If you connect a debit card and still see a message to connect a debit card to receive instant payouts, the card you connected is not eligible. You will need to try a different card.
+### Enable payments via PayPal
+If you have [connected your PayPal account](275-paypal-connect) with Gumroad, proceeds from all sales via PayPal will be credited to your connected account at the time of sale, in the default currency of your PayPal account. This appears on your [Payouts page](269-balance-page) as "PayPal Payouts".
+### The account review process
+![](https://d33v4339jhl8k0.cloudfront.net/docs/assets/5c4657ad2c7d3a66e32d763f/images/63bb9209d0b6de7e3be2a8e4/file-5aTUwIGukY.png)
+For our review, we require your account to be legitimate in two major ways:
+\* You comply with both [Gumroad's terms](https://gumroad.com/terms) and those of our payment processors.
+\* Your account is not racking up chargebacks and suspicious purchases.
+The review process can take 1-3 weeks depending on your sales and the data we can analyze. Typically, this means 3-4 sales with a balance over US$10; however, every account is unique so we thank you for your patience.
+You cannot speed up the review process by purchasing your own product. Payment processors view purchasing your own products as fraudulent, and this can get you suspended or permanently banned. If you just want to test your product, please use the [test purchase feature](62-testing-a-purchase).
+There can be other reasons for a payout delay that you can know more about here: [Payout delays](281-payout-delays)
+### Related Articles
+\* [Gumroad's fees](66-gumroads-fees)
+\* [Why choose Gumroad?](64-is-gumroad-for-me)
+\* [Payout delays](281-payout-delays)
+\* [Does Gumroad issue form 1099-K and 1099-MISC?](15-1099s)
+\* [Connect your Stripe account to Gumroad](330-stripe-connect)

@@ -1,0 +1,197 @@
+# Source URL: https://docs.openclaw.ai/cli/browser
+# Content Length: 6495 characters
+# Extracted at: 2026-03-23 06:49:30
+#============================================================
+
+
+browser - OpenClaw[Skip to main content](#content-area)[OpenClaw home page![]()![]()](/)![]()EnglishSearch...⌘K
+
+* [GitHub](https://github.com/openclaw/openclaw)
+* [Releases](https://github.com/openclaw/openclaw/releases)
+* [Discord](https://discord.com/invite/clawd)
+Search...NavigationTools and executionbrowser[Get started](/)[Install](/install)[Channels](/channels)[Agents](/concepts/architecture)[Tools & Plugins](/tools)[Models](/providers)[Platforms](/platforms)[Gateway & Ops](/gateway)[Reference](/cli)[Help](/help)
+##### CLI commands
+
+* [CLI Reference](/cli)
+* Gateway and service
+* Agents and sessions
+* Channels and messaging
+* Tools and execution
+  + [approvals](/cli/approvals)
+  + [browser](/cli/browser)
+  + [cron](/cli/cron)
+  + [node](/cli/node)
+  + [nodes](/cli/nodes)
+  + [Sandbox CLI](/cli/sandbox)
+* Configuration
+* Plugins and skills
+* Interfaces
+* Utility
+##### RPC and API
+
+* [RPC Adapters](/reference/rpc)
+* [Device Model Database](/reference/device-models)
+##### Templates
+
+* [Default AGENTS.md](/reference/AGENTS.default)
+* [AGENTS.md Template](/reference/templates/AGENTS)
+* [BOOT.md Template](/reference/templates/BOOT)
+* [BOOTSTRAP.md Template](/reference/templates/BOOTSTRAP)
+* [HEARTBEAT.md Template](/reference/templates/HEARTBEAT)
+* [IDENTITY](/reference/templates/IDENTITY)
+* [SOUL.md Template](/reference/templates/SOUL)
+* [TOOLS.md Template](/reference/templates/TOOLS)
+* [USER](/reference/templates/USER)
+##### Technical reference
+
+* [Pi Integration Architecture](/pi)
+* [Onboarding Reference](/reference/wizard)
+* [Token Use and Costs](/reference/token-use)
+* [SecretRef Credential Surface](/reference/secretref-credential-surface)
+* [Prompt Caching](/reference/prompt-caching)
+* [API Usage and Costs](/reference/api-usage-costs)
+* [Transcript Hygiene](/reference/transcript-hygiene)
+* [Memory configuration reference](/reference/memory-config)
+* [Date and Time](/date-time)
+##### Concept internals
+
+* [TypeBox](/concepts/typebox)
+* [Markdown Formatting](/concepts/markdown-formatting)
+* [Typing Indicators](/concepts/typing-indicators)
+* [Usage Tracking](/concepts/usage-tracking)
+* [Timezones](/concepts/timezone)
+##### Project
+
+* [Credits](/reference/credits)
+##### Release policy
+
+* [Release Policy](/reference/RELEASING)
+* [Tests](/reference/test)
+On this page
+
+* [openclaw browser](#openclaw-browser)
+* [Common flags](#common-flags)
+* [Quick start (local)](#quick-start-local)
+* [Profiles](#profiles)
+* [Tabs](#tabs)
+* [Snapshot / screenshot / actions](#snapshot-%2F-screenshot-%2F-actions)
+* [Existing Chrome via MCP](#existing-chrome-via-mcp)
+* [Remote browser control (node host proxy)](#remote-browser-control-node-host-proxy)
+Tools and execution
+
+browser
+=======
+
+[​](#openclaw-browser)`openclaw browser`
+========================================
+
+Manage OpenClaw’s browser control server and run browser actions (tabs, snapshots, screenshots, navigation, clicks, typing).
+Related:
+
+* Browser tool + API: [Browser tool](/tools/browser)
+
+[​](#common-flags)Common flags
+------------------------------
+
+* `--url <gatewayWsUrl>`: Gateway WebSocket URL (defaults to config).
+* `--token <token>`: Gateway token (if required).
+* `--timeout <ms>`: request timeout (ms).
+* `--browser-profile <name>`: choose a browser profile (default from config).
+* `--json`: machine-readable output (where supported).
+
+[​](#quick-start-local)Quick start (local)
+------------------------------------------
+
+Copy
+```
+openclaw browser profiles
+openclaw browser --browser-profile openclaw start
+openclaw browser --browser-profile openclaw open https://example.com
+openclaw browser --browser-profile openclaw snapshot
+
+```
+
+[​](#profiles)Profiles
+----------------------
+
+Profiles are named browser routing configs. In practice:
+
+* `openclaw`: launches or attaches to a dedicated OpenClaw-managed Chrome instance (isolated user data dir).
+* `user`: controls your existing signed-in Chrome session via Chrome DevTools MCP.
+* custom CDP profiles: point at a local or remote CDP endpoint.
+
+Copy
+```
+openclaw browser profiles
+openclaw browser create-profile --name work --color "#FF5A36"
+openclaw browser create-profile --name chrome-live --driver existing-session
+openclaw browser delete-profile --name work
+
+```
+
+Use a specific profile:
+Copy
+```
+openclaw browser --browser-profile work tabs
+
+```
+
+[​](#tabs)Tabs
+--------------
+
+Copy
+```
+openclaw browser tabs
+openclaw browser open https://docs.openclaw.ai
+openclaw browser focus <targetId>
+openclaw browser close <targetId>
+
+```
+
+[​](#snapshot-/-screenshot-/-actions)Snapshot / screenshot / actions
+--------------------------------------------------------------------
+
+Snapshot:
+Copy
+```
+openclaw browser snapshot
+
+```
+
+Screenshot:
+Copy
+```
+openclaw browser screenshot
+
+```
+
+Navigate/click/type (ref-based UI automation):
+Copy
+```
+openclaw browser navigate https://example.com
+openclaw browser click <ref>
+openclaw browser type <ref> "hello"
+
+```
+
+[​](#existing-chrome-via-mcp)Existing Chrome via MCP
+----------------------------------------------------
+
+Use the built-in `user` profile, or create your own `existing-session` profile:
+Copy
+```
+openclaw browser --browser-profile user tabs
+openclaw browser create-profile --name chrome-live --driver existing-session
+openclaw browser create-profile --name brave-live --driver existing-session --user-data-dir "~/Library/Application Support/BraveSoftware/Brave-Browser"
+openclaw browser --browser-profile chrome-live tabs
+
+```
+
+This path is host-only. For Docker, headless servers, Browserless, or other remote setups, use a CDP profile instead.
+
+[​](#remote-browser-control-node-host-proxy)Remote browser control (node host proxy)
+------------------------------------------------------------------------------------
+
+If the Gateway runs on a different machine than the browser, run a **node host** on the machine that has Chrome/Brave/Edge/Chromium. The Gateway will proxy browser actions to that node (no separate browser control server required).
+Use `gateway.nodes.browser.mode` to control auto-routing and `gateway.nodes.browser.node` to pin a specific node if multiple are connected.
+Security + remote setup: [Browser tool](/tools/browser), [Remote access](/gateway/remote), [Tailscale](/gateway/tailscale), [Security](/gateway/security)[approvals](/cli/approvals)[cron](/cli/cron)⌘I[Powered byThis documentation is built and hosted on Mintlify, a developer documentation platform](https://www.mintlify.com?utm_campaign=poweredBy&utm_medium=referral&utm_source=clawdhub)

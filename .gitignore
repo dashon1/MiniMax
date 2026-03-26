@@ -1,0 +1,7 @@
+node_modules/
+*.zip
+dist/
+.env
+EVERYTHING_YouTube_Creator_Kits.zip
+master_download/
+my_channel_files/
