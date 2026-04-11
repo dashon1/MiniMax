@@ -1,0 +1,425 @@
+# Source URL: https://clawbot.ai/skills/agent-browser.html
+# Content Length: 12449 characters
+# Extracted at: 2026-04-08 11:15:52
+#============================================================
+
+
+
+
+
+Agent Browser - AI Skill for OpenClaw | clawbot
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+[CClawBot.ai](/)
+
+* [Why clawbot](/why-clawbot.html)
+* [Get Started](/getting-started-with-clawbot.html)
+* [Use Cases](/clawbot-use-cases.html)
+* [How It Works](/how-clawbot-works.html)
+* [Skills](/skills/) 
+  #### Categories
+  
+  + [AI & Intelligence 63](/skills/category/ai-intelligence.html)
+  + [Developer Tools 27](/skills/category/developer-tools.html)
+  + [Productivity 70](/skills/category/productivity.html)
+  + [Data & Analytics 9](/skills/category/data-analytics.html)
+  + [Content Creation 22](/skills/category/content-creation.html)
+  + [Security & Compliance 28](/skills/category/security-compliance.html)
+  + [Communication 9](/skills/category/communication.html)[View All Skills →](/skills/)
+  
+  #### Top Skills
+  
+  + [self-improving-agent
+    Captures learnings, errors, and corrections to enable con...
+    81.1K downloads](/skills/self-improving-agent.html)
+  + [Gog
+    Google Workspace CLI for Gmail, Calendar, Drive, Contacts...
+    75.5K downloads](/skills/gog.html)
+  + [Summarize
+    Summarize URLs or files with the summarize CLI (web, PDFs...
+    62.8K downloads](/skills/summarize.html)
+  + [Tavily Web Search
+    AI-optimized web search via Tavily API. Returns concise, ...
+    71.8K downloads](/skills/tavily-search.html)
+  + [Agent Browser
+    A fast Rust-based headless browser automation CLI with No...
+    58.6K downloads](/skills/agent-browser.html)
+  + [Find Skills
+    Helps users discover and install agent skills when they a...
+    66.6K downloads](/skills/find-skills.html)
+  + [Ontology
+    Typed knowledge graph for structured agent memory and com...
+    91.2K downloads](/skills/ontology.html)
+  + [Github
+    Interact with GitHub using the `gh` CLI. Use `gh issue`, ...
+    58.8K downloads](/skills/github.html)
+* [Wiki](/wiki/) 
+  #### Topics A-I
+  
+  + [Ai Frameworks 11](/wiki/ai-frameworks/)
+  + [Ai Processing 121](/wiki/ai-processing/)
+  + [Ai Tools 41](/wiki/ai-tools/)
+  + [Apis 101](/wiki/apis/)
+  + [Applications 102](/wiki/applications/)
+  + [Community 41](/wiki/community/)
+  + [Devops 81](/wiki/devops/)
+  + [Industry 78](/wiki/industry/)
+  + [Infrastructure 101](/wiki/infrastructure/)
+  + [Integrations 82](/wiki/integrations/)
+  #### Topics L-W
+  
+  + [Llm Models 31](/wiki/llm-models/)
+  + [Market 52](/wiki/market/)
+  + [News 41](/wiki/news/)
+  + [Openclaw Core 41](/wiki/openclaw-core/)
+  + [Productivity 61](/wiki/productivity/)
+  + [Security 41](/wiki/security/)
+  + [Skills 81](/wiki/skills/)
+  + [Voice Memory 71](/wiki/voice-memory/)
+  + [Web3 21](/wiki/web3/)
+  + [Web3 Infra 21](/wiki/web3-infra/)[Browse All Wiki →](/wiki/)
+  
+  #### Popular Articles
+  
+  + [Agentic Rag Agentic RagAi Processing](/wiki/ai-processing/agentic-rag-agentic-rag.html)
+  + [Alexa Amazon AssistantAi Processing](/wiki/ai-processing/alexa-amazon-assistant.html)
+  + [Ai 17Applications](/wiki/applications/ai-17.html)
+  + [Ai Alignment ResearchApplications](/wiki/applications/ai-alignment-research.html)
+  + [ActivitypubApis](/wiki/apis/activitypub.html)
+  + [Agency Swarm Custom Ai Agent SwarmsApis](/wiki/apis/agency-swarm-custom-ai-agent-swarms.html)
+  + [Agent To Agent Commerce Agent To Agent BusinessInfrastructure](/wiki/infrastructure/agent-to-agent-commerce-agent-to-agent-business.html)
+  + [Agi Development TrendsInfrastructure](/wiki/infrastructure/agi-development-trends.html)
+* [FAQ](/faq/)
+
+
+1. [Home](/)
+2. /
+3. [Skills](/skills/)
+4. /
+5. Agent Browser
+
+#### Productivity
+
+* [Agent Browser58.6K](agent-browser.html)
+* [AI Persona OS6.5K](ai-persona-os.html)
+* [Google Calendar (via gcal...9.2K](gcalcli-calendar.html)
+* [ADHD Daily Planner2.9K](adhd-daily-planner.html)
+* [SEO Intelligence & Compet...5.0K](seo-competitor-analysis.html)
+* [AI Meeting Notes w/ Actio...4.2K](ai-meeting-notes.html)
+* [Mission Control4.4K](mission-control.html)
+* [Job Auto Apply3.0K](job-auto-apply.html)
+* [AI Daily Briefing2.6K](ai-daily-briefing.html)
+* [Todo management3.7K](todo-management.html)
+* [Windows UI Automation4.5K](windows-ui-automation.html)
+* [OpenClaw Token Optimizer3.9K](openclaw-token-optimizer.html)
+* [Quick Reminders2.7K](quick-reminders.html)
+* [Gmail OAuth Setup2.8K](gmail-oauth.html)
+* [PowerPoint Automation3.4K](tiangong-wps-ppt-automation.html)
+* [Google Calendar (via gogcli)3.2K](gog-calendar.html)
+* [Todoist CLI2.3K](todoist-cli.html)
+* [AI-Driven Project Managem...3.7K](tensorpm.html)
+* [Agent Content Pipeline2.5K](agent-content-pipeline.html)
+* [AI Proposal Generator2.5K](ai-proposal-generator.html)
+* [ADHD Founder Planner1.2K](adhd-founder-planner.html)
+* [Microsoft 365 MCP Server2.3K](mcp-microsoft365.html)
+* [Supercall1.3K](supercall.html)
+* [Social Media Scheduler2.2K](social-media-scheduler.html)
+* [Browser Cash2.7K](browser-cash.html)
+* [Obsidian Tasks1.8K](obsidian-tasks.html)
+* [Project Management Guru (...2.1K](project-management-guru-adhd.html)
+* [Just Fucking Cancel2.1K](just-fucking-cancel.html)
+* [Apple Mail Search2.3K](apple-mail-search.html)
+* [Personal CRM1.7K](personal-crm.html)
+
+[All Productivity →](/skills/category/productivity.html)
+
+
+[Productivity](/skills/category/productivity.html)
+
+Agent Browser
+=============
+
+
+58.6KDownloads
+304Stars
+668Installs
+0.2.0Version
+
+What is Agent Browser?
+----------------------
+
+Agent Browser is an OpenClaw skill. A fast Rust-based headless browser automation CLI with Node.js fallback that enables AI agents to navigate, click, type, and snapshot pages via structured commands. It belongs to the [Productivity](/skills/category/productivity.html) collection. For background, see [MCP Server - Puppeteer (Browser Control)](/wiki/integrations/mcp-server-puppeteer.html) in our wiki.
+
+Agent Browser是一款基于Rust的无头浏览器自动化命令行工具，支持Node.js，赋能AI智能体通过结构化指令实现网页导航、点击、输入及截图等操作。
+
+Agent Browser has 58.6K+ downloads. One of the most used OpenClaw skills. 304 stars from users. 668 active installs.
+
+
+
+[automation](/skills/tag/automation.html)[browser](/skills/tag/browser.html)headless[web](/skills/tag/web.html)
+
+Key Features
+------------
+
+workflow automation
+
+
+browser automation
+
+
+web interaction
+
+
+Task automation
+
+
+One-command install via OpenClaw
+
+
+
+How to Install Agent Browser
+----------------------------
+
+Installing Agent Browser in OpenClaw takes just one command. Make sure you have OpenClaw set up and running before proceeding.
+
+1
+### Install the Skill
+
+Run the following command in your terminal to add Agent Browser to your OpenClaw instance:
+
+```
+openclaw skill install agent-browser
+```
+
+
+2
+### Verify Installation
+
+Confirm the skill is properly installed and ready to use:
+
+```
+openclaw skill list
+```
+
+
+3
+### Start Using
+
+The skill is now available in your OpenClaw conversations. Simply describe what you want to accomplish, and OpenClaw will automatically invoke Agent Browser when relevant.
+
+
+
+
+
+Use Cases
+---------
+
+What people do with Agent Browser:
+
+* Agent-browser Vercel
+* Agent Browser OpenClaw
+* Agent browser claude skill
+* AI browser agent
+
+| Author | [TheSethRose](/skills/author/TheSethRose.html) |
+| --- | --- |
+| Category | [Productivity](/skills/category/productivity.html) |
+| Version | 0.2.0 |
+| Updated | 2026-03-01 |
+| Downloads | 58,645 |
+| Score | 54,674 |
+| Homepage | <https://clawhub.ai/TheSethRose/agent-browser> |
+
+Frequently Asked Questions
+--------------------------
+
+### What is Agent Browser and what does it do?
+
+Agent Browser is an OpenClaw skill. A fast Rust-based headless browser automation CLI with Node.js fallback that enables AI agents to navigate, click, type, and snapshot pages via structured commands. Install it with one command and it works inside your existing setup.
+
+
+### How do I install Agent Browser?
+
+Run "openclaw skill install agent-browser" in your terminal. OpenClaw must be set up first. After install, the skill is available in your conversations automatically.
+
+
+### Is Agent Browser free to use?
+
+Yes. Agent Browser is free and open-source. Install it from the OpenClaw skill directory at no cost. Maintained by TheSethRose.
+
+
+
+Learn More
+----------
+
+### From the Wiki
+
+* [MCP Server - Puppeteer (Browser Control)](/wiki/integrations/mcp-server-puppeteer.html)
+* [Cline (VS Code)](/wiki/ai-tools/cline.html)
+* [Huginn - Open Source Agent-Based Automation](/wiki/productivity/huginn-open-source-agent-based-automation.html)
+* [OpenClaw Web Browsing](/wiki/openclaw-core/openclaw-web-browsing.html)
+### Common Questions
+
+* [Can I Run A Fast Chat Agent And An Opus For Coding Agent](/faq/can-i-run-a-fast-chat-agent-and-an-opus-for-coding-agent.html)
+* [Can The Openclaw Browser Run Headless](/faq/can-the-openclaw-browser-run-headless.html)
+* [Can Agents Work Outside The Workspace](/faq/can-agents-work-outside-the-workspace.html)
+### Getting Started
+
+* [How clawbot Works](/how-clawbot-works.html)
+* [What is OpenClaw](/what-is-openclaw.html)
+
+
+
+
+External References
+-------------------
+
+Learn more from these authoritative sources:
+
+* [Vercel Official](https://vercel.com)
+* [Vercel Official Documentation](https://vercel.com/docs)
+* [ChatGPT by OpenAI](https://openai.com/chatgpt)
+* [ChatGPT by OpenAI Documentation](https://platform.openai.com/docs)
+
+Get Started with Agent Browser
+------------------------------
+
+Add Agent Browser to your OpenClaw setup. One command. Done.
+
+[Install Skill](https://clawhub.ai/TheSethRose/agent-browser)
+
+Related Skills
+--------------
+
+[### Ghost Browser
+
+Automated Chrome browser using nodriver for AI agent web tasks. Full CLI cont...
+
+231 downloads](ghost-browser.html)[### Browser Cash
+
+Spin up unblocked browser sessions via Browser.cash for web automation. Sessi...
+
+2.7K downloads](browser-cash.html)[### HARPA AI
+
+Automate web browsers, scrape pages, search the web, and run AI prompts on li...
+
+259 downloads](harpa-ai.html)[### Let's Clarify
+
+Collect structured human input — approvals, decisions, reviews, data — via we...
+
+153 downloads](letsclarify.html)[### AI Persona OS
+
+The complete operating system for OpenClaw agents. Now with SOUL.md Maker (de...
+
+6.5K downloads](ai-persona-os.html)[### Mission Control
+
+Kanban-style task management dashboard for AI assistants. Manage tasks via CL...
+
+4.4K downloads](mission-control.html)
+
+Explore More in [Productivity](/skills/category/productivity.html)
+------------------------------------------------------------------
+
+Discover other popular skills in the Productivity category.
+
+[### AI Persona OS
+
+The complete operating system for OpenClaw agents. Now with SOUL.md Maker (de...
+
+6.5K downloads](ai-persona-os.html)[### Google Calendar (via gcalcli)
+
+Google Calendar via gcalcli: today-only agenda by default, bounded meaning-fi...
+
+9.2K downloads](gcalcli-calendar.html)[### ADHD Daily Planner
+
+Time-blind friendly planning, executive function support, and daily structure...
+
+2.9K downloads](adhd-daily-planner.html)
+
+[View all Productivity skills →](/skills/category/productivity.html)
+
+
+[← Tavily Web Search](tavily-search.html)[Find Skills →](find-skills.html)
+
+
+
+
+#### Getting Started
+
+[Home](/)
+[Why clawbot](/why-clawbot.html)
+[Founder Story](/peter-steinberger-founder.html)
+[Installation Guide](/getting-started-with-clawbot.html)
+[Usage Manual](/how-to-use-clawbot.html)
+
+#### Learn More
+
+[Technical Architecture](/how-clawbot-works.html)
+[Use Cases](/clawbot-use-cases.html)
+[Comparisons](/clawbot-vs-alternatives.html)
+[Security Guide](/clawbot-security-guide.html)
+[Moltbook](/moltbook.html)
+
+#### OpenClaw
+
+[What is OpenClaw](/what-is-openclaw.html)
+[Features](/openclaw-features.html)
+[Installation](/how-to-install-openclaw.html)
+[Local vs Cloud](/openclaw-local-vs-cloud.html)
+[System Requirements](/openclaw-system-requirements.html)
+
+#### Skills
+
+[All Skills](/skills/)
+[AI & Intelligence](/skills/category/ai-intelligence.html)
+[Developer Tools](/skills/category/developer-tools.html)
+[Productivity](/skills/category/productivity.html)
+[Data & Analytics](/skills/category/data-analytics.html)
+[Content Creation](/skills/category/content-creation.html)
+[Security & Compliance](/skills/category/security-compliance.html)
+[Communication](/skills/category/communication.html)
+[Other](/skills/category/other.html)
+
+#### Resources
+
+[Documentation](https://docs.clawd.bot)
+[Discord](https://discord.gg/clawbot)
+[Wiki](/wiki/)
+[FAQ](/faq/)
+[Ecosystem](/ecosystem/)
+
+#### Connect
+
+[Twitter](https://twitter.com/steipete)
+
+
+© 2026 [clawbot](/). MIT License
+| [support@clawbot.ai](mailto:support@clawbot.ai)
+| [Sitemap](/sitemap.html)
+
+
+
+
+
+

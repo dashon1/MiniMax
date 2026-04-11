@@ -1,0 +1,269 @@
+# Source URL: https://www.tencentcloud.com/techpedia/139672
+# Content Length: 19987 characters
+# Extracted at: 2026-04-08 11:15:57
+#============================================================
+
+Mastering OpenClaw | A Guide to Installing OpenClaw Skills and Practical Applications - Tencent Cloud
+YOUR COOKIE PREFERENCES
+We use cookies that are necessary to provide the Tencent Cloud website. We would also like to use other cookies to improve your experience, optimise and analyse Tencent Cloud website features and usage. For more information, please refer to our [Cookies Policy](https://www.tencentcloud.com/document/product/301/17346).
+Accept all optional cookiesReject all optional cookiesCustomise cookies settings
+[\*Tencent Cloud\*](https://www.tencentcloud.com/)
+Promotions[Products](javascript:;)[Solutions](javascript:;)[Pricing](javascript:;)[Partner Network](javascript:;)[Marketplace](https://www.tencentcloud.com/market)Explore
+Search by Keyword
+English
+International
+[English - EN](javascript:void(0);)[한국어 - KO](javascript:void(0);)[日本語 - JP](javascript:void(0);)[简体中文 - ZH](javascript:void(0);)[Português - PT](javascript:void(0);)[Bahasa Indonesia - IND](javascript:void(0);)
+中国站
+[简体中文](https://cloud.tencent.com)
+[Contact Us](https://www.tencentcloud.com/contact-us)[Documentation](https://www.tencentcloud.com/document/product)
+[Console](javascript:;)[Log In](javascript:;)
+Sign Up Free
+Sign up for these perks:
+Free trials for 30+ products
+Exclusive offers for new user
+Early access to new products
+Get Started For Free
+[Technology Encyclopedia Home](/techpedia) >Mastering OpenClaw | A Guide to Installing OpenClaw Skills and Practical Applications
+Table of Contents
+[Experience the Default Integrated Skills](#experience-the-default-integrated-skills)[Scenario 1: Web Browsing](#scenario-1%3A-web-browsing)[Scenario 2: Searching for Information Based on a Browser](#scenario-2%3A-searching-for-information-based-on-a-browser)[Scenario 3: Searching for the Email Skills with the Highest Number of Installs](#scenario-3%3A-searching-for-the-email-skills-with-the-highest-number-of-installs)[How do I install new Skills?](#how-do-i-install-new-skills%3F)[Uninstalling Skills](#uninstalling-skills)[🚀 Developer Community & Support](#%F0%9F%9A%80-developer-community-%26-support)
+# Mastering OpenClaw | A Guide to Installing OpenClaw Skills and Practical Applications
+Created on 2026-03-02 17:37:18
+8630
+If the combination of OpenClaw and large models gives us an intelligent AI assistant, then Skills are its \*\*“hands.”\*\* Skills can further expand the capabilities of our already deployed OpenClaw.
+> \*\*Note:\*\* If you haven’t deployed your own OpenClaw yet, I strongly recommend starting from the [Tencent Cloud OpenClaw](https://www.tencentcloud.com/act/pro/intl-openclaw) to get an OpenClaw instance up and running first, then return to this tutorial to explore more possibilities.
+## Experience the Default Integrated Skills
+To allow everyone to quickly experience the capabilities of \*\*OpenClaw + Skills\*\*, we have integrated a browser operation plugin, `agent-browser v0.2.0`, into the latest version of the OpenClaw application template.
+`agent-browser` is a browser tool that supports AI Agents. AI Agents can browse pages, click, enter text, and take page snapshots using structured commands.
+The demonstration here is based on \*\*Telegram Bot\*\*. If you want to integrate your OpenClaw with Telegram Bot, you can refer to the [Telegram Bot integration guide](https://www.tencentcloud.com/techpedia/139185) for more information.
+> \*\*⚠️ Note:\*\* After multiple tests, we found that when using the default integrated Skills to complete a task for the first time, OpenClaw may not yet be aware of the existence of the default integrated Skills. Therefore, before starting, you can first let it see what Skills are available, and then execute the specific task.
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1\*AxeZ3ahBMZfk7PN0KppvbQ.png)
+## Scenario 1: Web Browsing
+Here, we’ll have OpenClaw help us browse a webpage and read its content. You can directly copy the following prompt and send it to your OpenClaw:
+```
+Use your browser to visit Baidu and see what content is displayed on the page.
+```
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1\*Y0AmIEDWcvZM\_Afjg61WDQ.png)
+## Scenario 2: Searching for Information Based on a Browser
+Having browser control capabilities, OpenClaw naturally possesses the ability to search for information. Here, we’ll try having it search for today’s trending news. You can directly copy either of the following prompts:
+```
+Search for today’s 5 trending news items using your browser.
+```
+```
+Please help me find today's top 5 trending news stories using your browser.
+```
+![](https://miro.medium.com/v2/resize:fit:4800/format:webp/1\*u2U07JHHC-Le4fZ-XP92CQ.png)
+## Scenario 3: Searching for the Email Skills with the Highest Number of Installs
+> \*\*Note:\*\* This task actually involves multiple steps, including opening a webpage, waiting for the page to load, entering content, and clicking a button on the page, making it relatively complex.
+>
+> In the next section, I will demonstrate how to install a Skill. So, let OpenClaw help us with the initial location here; the email scenario is used as the search example.
+```
+Use your browser to search on Clawhub to see which email skill has the highest number of installations.
+```
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1\*7i5kr3-2ksjRpPyJk65NXg.png)
+## How do I install new Skills?
+### Install directly via OpenClaw chat
+You can also install the Skills you want to use directly through a chat with OpenClaw. Of course, the Skill still needs to be listed in `Clawhub/Skills`. Here, we’ll use \*\*Telegram Bot\*\* and \*\*McDonald’s Assistant (`/mcd`)\*\* as examples.
+First, you need to ensure you can currently chat with OpenClaw normally. Then refer to the instruction below to tell OpenClaw which Skill you want to install:
+```
+Please install a skill for me using Clawhub; its name is mcd.
+```
+If all goes well, the installation will be successful immediately.
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1\*fQF0ZxCvzJCeBxeUS-9FTQ.png)
+> \*\*⚠️ Note:\*\* If you select a Skill marked as \*\*high-risk\*\* on Clawhub, OpenClaw will alert you and ask for a second confirmation regarding installation. At that point, you need to decide whether to proceed.
+>
+> Our recommendation is simple: if you are \*\*100% familiar\*\* with the Skill you are installing, then you can proceed; otherwise, install it with caution.
+Of course, you can also verify the successful installation by having OpenClaw check the usage instructions for the Skill:
+```
+Please check its usage instructions for me.
+```
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1\*cBbrh53KTDlm8K9u9muL0w.png)
+The installation has now been successfully completed.
+## Uninstalling Skills
+If you have installed Skills that you no longer use, you can follow the instructions in this section to remove them.
+Similar to installing Skills via OpenClaw dialog, deletion can also be handled by OpenClaw.
+First, let’s have OpenClaw check the currently installed Skills:
+```
+Check which skills you have currently installed.
+```
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1\*rxfp94Qihz3a8qNlSoJWNA.png)
+Next, find the Skill you want to delete, such as `mail` here:
+```
+Please help me delete the "mail" skill.
+```
+![](https://miro.medium.com/v2/resize:fit:1400/format:webp/1\*vbUvsIfqcZ-UvKFn3BmZ6w.png)
+If all goes well, the deletion should complete successfully. Of course, due to differences in models or the characteristics of a specific OpenClaw setup, it may warn you to delete with caution; if that happens, simply continue the dialog and follow its guidance.
+If you have not deployed your OpenClaw yet, start from the [Tencent Cloud OpenClaw landing page](https://www.tencentcloud.com/act/pro/intl-openclaw). If you want to continue extending your bot with Telegram-related capabilities, the [Telegram Bot integration guide](https://www.tencentcloud.com/techpedia/139185) is also worth keeping nearby.
+## 🚀 Developer Community & Support
+### 1️⃣ OpenClaw Developer Community
+\*\*Unlock advanced tips on Discord\*\*
+> [Click to join the community](https://discord.gg/r6TS8GqwV6)\*Note: After joining, you can get the latest plugin templates and deployment playbooks\*
+### 2️⃣ Dedicated Support
+\*\*Join WhatsApp / WeCom for dedicated technical support\*\*
+| Channel | Scan / Click to join |
+| --- | --- |
+| \*\*WhatsApp Channel\*\* | |
+| \*\*WeCom (Enterprise WeChat)\*\* | |
+\*\*Learn more on the official landing page:\*\*[Tencent Cloud OpenClaw](https://www.tencentcloud.com/act/pro/intl-openclaw)
+Related knowledge points
+[How to use the OpenClaw copilot proxy for VS Code integration
+Self-hosting an agent is easy until you need it online 24/7. How to use the OpenClaw copilot proxy for VS Code integration? is a practical question — let’s answer it in a way you can deploy.
+The direct answer
+Treat this as a deployment and operations question. The goal is to get a predictable runtime first, then iterate on capabilities (channels, skills, and policies) without rebuilding the
+2026-03-05 17:28:07
+93](/techpedia/141218)[How to use OpenClaw for product research and competitor analysis
+Competitor analysis is easy to start and hard to keep honest.
+The first week you track a few pricing pages and release notes. The second month, your notes are stale, your screenshots are missing, and nobody knows what changed. The problem is not intelligence. It is maintenance.
+OpenClaw (Clawdbot) is a good fit for product research because it can run a steady loop: collect signals, diff changes,
+2026-03-05 17:28:11
+59](/techpedia/141357)[OpenClaw 疑难杂症 FAQ 一览表
+首次使用提示： 如果你还没有部署自己的 OpenClaw，建议先从 Tencent Cloud OpenClaw 开始，一键即可在几秒内完成部署。
+👉 最全教程指南
+本指南主要回答大家在使用过程中常问的高频问题，主要分为以下几类：
+前置选购
+部署安装
+模型配置
+通道配置
+Skill 技能
+对话调优
+🎮 通用常见问题
+我不会安装，还会有线下装机活动或者分享交流会吗？ 一系列线下活动正在筹备中，欢迎关注【腾讯云服务器】公众号了解最新的产品动态。同时我们每周会有线上直播，手把手教大家如何上手安装，可以加入 OpenClaw 云端交流群；也可以加入 Lighthouse官方交流群。
+🎨 前置选购
+我想安装小龙虾，需要有哪些费用产生？ 主要需要购买云服务器和大模型的资源。
+轻量应用服务器Lighthouse 购买：👉点击这里
+大模型资源可根据实际需求购买各厂商的模型，费用不等。
+云服
+2026-03-12 20:39:02
+1093](/techpedia/142847)[How to configure TTS-STT services for OpenClaw voice features
+The problem is rarely the model. It is the runtime: uptime, guardrails, and repeatability. How to configure TTS/STT services for OpenClaw voice features? is a practical question — let’s answer it in a way you can deploy.
+The direct answer
+Treat this as a deployment and operations question. The goal is to get a predictable runtime first, then iterate on capabilities (channels, skills, and policies)
+2026-03-05 17:28:06
+548](/techpedia/141145)[OpenClaw Browser Integration - Automated Interaction with Web Applications
+The fastest way to lose trust in an automation is when it works 90% of the time.
+The interesting part is not the first run. It is the second week.
+OpenClaw Browser Integration: Automated Interaction with Web Applications sounds broad on
+purpose. The goal is to turn repeatable web operations, data acquisition, and anti-flakiness
+into something you can run every day without babysitting.
+For this
+2026-03-03 19:49:00
+115](/techpedia/140523)[OpenClaw IM Robot Troubleshooting and Repair Tutorial
+OpenClaw IM Robot Troubleshooting and Repair Tutorial
+So your OpenClaw bot stopped responding on Telegram. Or it's sending garbled messages on Discord. Or WhatsApp shows "delivered" but the bot never processes the incoming message. Sound familiar?
+IM robot integrations are the most visible part of any OpenClaw deployment — and the most frustrating when they break. The good news: 90% of
+2026-03-03 19:49:09
+419](/techpedia/140788)[OpenClaw让小公司用得起AI大脑(含智能客服案例)
+OpenClaw让小公司用得起AI大脑(含智能客服案例)
+AI不再是大型企业的专利,小公司也能用上。OpenClaw降低了AI的使用门槛和成本,让小公司也能拥有AI大脑。
+小公司的AI困境
+传统AI方案的问题
+1. 成本高昂
+人力成本:50万/年(AI工程师)
+服务器成本:10万/年
+API成本:5万/年
+总成本:65万/年
+2. 技术门槛高
+需要专业AI团队
+需要大量训练数据
+需要持续优化维护
+3. 部署复杂
+需要配置服务器
+需要搭建架构
+需要安全加固
+4. 周期长
+从立项到上线:6-12个月
+持续迭代:3-6个月
+小公司根本用不起!
+OpenClaw的突破
+成本降低
+AI工程师:0元(开源,免编程)
+服务器成本:85元/月(腾讯云Lighthouse)
+API成本:150元/月(约5万次对话)
+总成本:235元/月
+对比传统方案:从65万/年降到2820元/年,降低99
+2026-03-06 16:57:10
+439](/techpedia/141455)[云上OpenClaw快速接入WhatsApp指南
+首次使用提示： 如果你还没有部署自己的 OpenClaw，建议先从 Tencent Cloud OpenClaw 购买云服务器，参考玩转OpenClaw｜云上OpenClaw(Clawdbot)一键秒级部署指南一键秒级部署指南，一键即可在几秒内完成部署。
+完成实例启动后，再回到这篇教程，继续探索更多进阶玩法。
+本文主要介绍如何在腾讯云轻量应用服务器Lighthouse中部署完成OpenClaw后，配置接入WhatsApp。
+前置准备工作
+OpenClaw（原Clawdbot）原生支持接入WhatsApp、Discord、Telegram、Slack等常用聊天软件，并通过这些软件与OpenClaw进行交互。在您正式开始为OpenClaw配置接入WhatsApp之前，请依次检查如下事项是否准备完成：
+您已经拥有一个或两个WhatsApp账号（账号数量取决于您是否需要给OpenClaw单
+2026-03-03 10:56:56
+2167](/techpedia/139674)[Mastering OpenClaw | One-Click, Instant Deployment Guide for OpenClaw (Clawdbot) on the Cloud
+Introduction
+In late January, an open-source AI assistant application called OpenClaw (formerly Clawdbot/Moltbot) quickly gained popularity in Chinese and international tech communities and social media, frequently trending on platforms like X, Reddit, and the Chinese tech world. OpenClaw isn’t the first “capable” AI agent on the market. However, it was precisely within just two or three weeks
+2026-02-26 11:26:21
+7499](/techpedia/139184)[Where to find community-developed OpenClaw plugins and skills
+Self-hosting an agent is easy until you need it online 24/7. Where to find community-developed OpenClaw plugins and skills? is a practical question — let’s answer it in a way you can deploy.
+The direct answer
+Skills are the modular capability layer: if the model is the brain, Skills are the hands. Skills are listed and distributed via Clawhub/Skills, and skills marked as high-risk can trigger
+2026-03-05 17:28:08
+250](/techpedia/141242)[OpenClaw Customer Service Case Studies Intelligent Response and Efficiency Improvement
+OpenClaw Customer Service Case Studies: Intelligent Response and Efficiency Improvement
+Customer support teams are drowning. Ticket volumes are up, customer expectations for response times are measured in minutes, and hiring more agents is not scaling. The organizations that are breaking through this ceiling are not just adding headcount — they are deploying AI-powered assistants that handle the
+2026-03-03 19:49:13
+432](/techpedia/140964)[玩转OpenClaw | 如何配置多个相互独立的 Agent？
+从 OpenClaw 爆火至今已经过去一月有余，我们看到有非常多的 AI 探险家们在不断探索各种 OpenClaw 的场景和玩法。随着你越来越了解 OpenClaw，渐渐会遇到一个问题：单个 Agent 处理多类任务会带来非常严重的记忆负担，由此会极大程度拉高 Token 消耗，后期往往一个问题可以干掉数十万 Token……
+就像一个真正的公司或组织内的成员一样，大家各自处理不同类型的任务，分工明确、职能分化，这几乎是任何一个系统在复杂度达到一定程度后的必由之路。
+OpenClaw 同样支持我们完成类似的事情：你可以创建多个相互隔离的 Agent，分别具有不同的人格、技能、记忆、工作空间等，而你要做的，就是定义它们，然后借助它们实现一个“AI 军团”。
+首次使用提示： 如果你还没有部署自己的 OpenClaw，建议先从 Tencent Cloud OpenClaw 开始，一键即可在几
+2026-03-10 16:22:07
+12436](/techpedia/142821)[OpenClaw Discord 机器人技能大全
+很多团队在做 OpenClaw Discord 机器人技能大全 时，第一反应都是先把机器人逻辑写出来，再慢慢补环境、补权限、补监控。问题是，只要消息链路一长、技能一多，本地设备就很容易出现掉线、休眠、日志分散和升级不可控的问题。尤其是 Discord 这类需要持续在线的消息入口，真正决定体验的，往往不是“能不能接上”，而是 能不能长期稳定、低成本、可维护地运行。
+为什么 技能大全 不能只停留在功能接通
+Discord 侧重点是把 OpenClaw 接入服务器、频道、角色与机器人交互链路，让社区里的消息、指令和自动化动作真正跑起来。在云端部署的价值很直接：机器人可以 7×24 在线，适合持续监听消息、执行 Slash 命令、维护频道秩序和联动外部 API。
+围绕这个主题，核心不只是把功能按钮点亮，而是把 消息入口、权限边界、技能调用、日志追踪和云上运行方式 一次性想清楚。如果一开始就把环境放
+2026-03-10 10:46:41
+13](/techpedia/142464)[OpenClaw WeChat Official Account Integration and Message Push Deployment
+Most deployment guides fail in one specific way: they tell you how to start a process, but not how to keep an agent reliable when real users show up.
+OpenClaw is agentic by design: it connects a model to tools, workflows, and guardrails. That architecture only becomes useful when deployment is stable, observable, and repeatable.
+If your target is a WeChat-facing bot, small timing bugs can become
+2026-03-03 19:48:52
+26](/techpedia/140038)[OpenClaw Calendar Integration Collection-Seamless Synchronization
+Calendars are supposed to reduce chaos, but cross-account sync and time-zone drift can do the opposite. A good calendar workflow makes time feel predictable again.
+OpenClaw (often deployed as Clawdbot) is a pragmatic way to build those workflows: you combine skills, triggers, and policies so that routine operations can run consistently, while humans stay in control of approvals and exceptions.
+2026-03-03 19:49:01
+61](/techpedia/140552)[A practical guide to OpenClaw trading, earning tens of thousands of dollars a month
+Note for first-time users: If you haven’t deployed OpenClaw yet, start with Tencent Cloud OpenClaw first. You can launch your OpenClaw instance in seconds with one click, then come back to this guide to explore more advanced use cases.
+It comes with a visual management panel and supports fast integration with QQ, WeCom, Lark, DingTalk, Discord, WhatsApp, Telegram, and iMessage.
+Let's cut
+2026-03-03 19:49:10
+6219](/techpedia/140834)[How to Use 6000+ Plugins in the OpenClaw Skill Marketplace
+There’s a moment every customer-service team hits: you’ve automated the “easy 20%,” but the next layer is messy. Shipping rules differ by region, refund policies depend on product category, and every platform has its own quirks. The hard truth is that your AI agent is only as useful as the tools it can safely call.
+That’s why the OpenClaw Skill Marketplace matters. When you hear “6000+ plugins,”
+2026-03-06 19:31:02
+394](/techpedia/141636)[Why is the OpenClaw gateway not starting (Error code 1008)
+Most AI agent demos fall apart the moment they touch real systems. Why is the OpenClaw gateway not starting (Error code 1008)? is a practical question — let’s answer it in a way you can deploy.
+The direct answer
+Treat this as a deployment and operations question. The goal is to get a predictable runtime first, then iterate on capabilities (channels, skills, and policies) without rebuilding the
+2026-03-05 17:28:07
+491](/techpedia/141185)[OpenClaw iMessage Auto-Reply: Personal AI Assistant Configuration
+OpenClaw iMessage Auto-Reply: Personal AI Assistant Configuration
+In today’s fast-paced digital world, managing instant messaging platforms like iMessage can be overwhelming. Whether you're a busy professional, a content creator, or simply someone who wants to stay responsive without constant manual input, automating your iMessage replies with an AI assistant is a game-changer. OpenClaw
+2026-02-28 22:14:45
+126](/techpedia/139593)[OpenClaw Application Marketplace - Pre-built Skills and Plugins Collection
+OpenClaw Application Marketplace: Pre-built Skills and Plugins Collection
+If you've ever spent hours wiring up a chatbot only to realize someone already solved that exact problem — you know the pain. That's precisely why the OpenClaw Application Marketplace exists: a curated library of pre-built skills and plugins that lets you skip the boilerplate and jump straight into building something useful.
+2026-03-03 19:49:09
+1498](/techpedia/140807)[OpenClaw Discord Robot Extension Installation
+OpenClaw Discord Robot Extension Installation: A Step-by-Step Guide with Tencent Cloud Lighthouse
+Discord has become a hub for communities, gamers, and developers alike. One of the most exciting ways to enhance your Discord server experience is by integrating custom bots or robot extensions that can automate tasks, moderate content, or provide unique functionalities. Among these, the OpenClaw
+2026-02-28 20:16:55
+101](/techpedia/139417)
+\* + [Facebook](https://www.facebook.com/TencentCloud/)
++ [Twitter](https://twitter.com/tencentcloud)
++ [Linkedin](https://www.linkedin.com/company/tencent-cloud)
+[tencent](/)
+Copyright © 2013-2026 Tencent Cloud. All Rights Reserved.
+[\*\*Privacy Policy\*\*](https://www.tencentcloud.com/document/product/301/17345)[Legal](https://www.tencentcloud.com/document/product/301/9248)[Cookie Policy](/document/product/301/17346)
+[Chat](javascript:;)
+Hi, I can answer your questions or connect you with a consultant.
+[Online Support
+Connect you with a consultant or answer your questions.](javascript:;)
+Contact
+[Contact Us
+Contact our sales team or business advisors to help your business.](https://www.tencentcloud.com/contact-us)[24/7 Technical Support
+Open a ticket if you're looking for further assistance](https://console.tencentcloud.com/workorder)
+24/7 Phone Support
+Toll Free
+More local hotlines coming soon
