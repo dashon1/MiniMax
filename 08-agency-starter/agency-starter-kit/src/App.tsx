@@ -1,0 +1,204 @@
+import { useState } from 'react'
+const V='#4c1d95';const V3='#7c3aed';const GD='#fbbf24';const BG='#0f0a1a';const BG2='#1a0f2e';const W='#ffffff';const GY='#c4b5fd';const GY2='#a78bfa'
+const files=[{n:'01_Quickstart_Guide.md',s:'6.2 KB',d:'24-hour launch plan, framework overview, and setup timeline'},{n:'02_Offer_Templates.md',s:'12.1 KB',d:'3 complete service offer templates: project, done-for-you+training, and retainer'},{n:'03_Sales_Script_Prompts.md',s:'10.8 KB',d:'8 AI prompts for sales messages, cold outreach, objection handling, and follow-ups'},{n:'04_Delivery_SOP.md',s:'13.4 KB',d:'4-stage delivery system: onboarding, execution, delivery, and review'},{n:'05_Client_Workflow_System.md',s:'9.7 KB',d:'Notion CRM setup, proposal templates, contracts, and financial tracking'}]
+const stages=[{n:'01',t:'Offer',d:'Choose from 3 pre-built service packages. Customize scope, price, and timeline.'},{n:'02',t:'Sales',d:'Write the pitch using AI script prompts. Send to 10-20 people in your network.'},{n:'03',t:'Delivery',d:'Follow the 4-stage delivery system. Onboard, execute, deliver, and review.'},{n:'04',t:'Workflow',d:'Manage clients via Notion CRM. Contracts, invoicing, and communication automated.'}]
+const feat=[{i:'OFFER',t:'3 Pre-Built Offer Templates',d:'Three complete service packages ready to customize and launch. Project, done-for-you+training, and monthly retainer.'},{i:'SALES',t:'8 AI Sales Script Prompts',d:'AI prompts for cold outreach, follow-ups, objection handling, discovery calls, and retention.'},{i:'DELIVERY',t:'4-Stage Delivery System',d:'Onboarding, execution, delivery, and review. Complete SOP for delivering on time and on scope.'},{i:'WORKFLOW',t:'Client Workflow System',d:'Notion CRM, proposal templates, contract templates, and financial tracking.'},{i:'LAUNCH',t:'24-Hour Launch Plan',d:'Hour-by-hour breakdown. Choose offer, build delivery system, write sales script, soft launch.'},{i:'PITCH',t:'Ready-Made Pitch Scripts',d:'Three complete pitch scripts: one for each offer type. Copy, customize, send.'}]
+const starter=['Quickstart Guide + 24-Hour Launch Plan','3 Offer Templates (copy and customize)','8 AI Sales Script Prompts','Delivery SOP (4-stage system)','48-hour email support']
+const complete=['Everything in Starter','Client Workflow System (Notion CRM + templates)','Contract template + proposal template','Financial tracking spreadsheet','Priority 24h support']
+const faqs=[{q:'Do I need existing clients to use this?',a:'This kit is designed for people who have a skill they can sell and want to go from idea to launched offer within 24 hours.'},{q:'What if I do not know what service to offer?',a:'The 3 offer templates help you define your offer. If you have a skill, you can package it as one of the three offer types.'},{q:'Do I need a contract?',a:'Yes, and the kit includes a contract template. The kit includes a basic service agreement template you can customize.'},{q:'What tools do I need?',a:'Notion (free), Google Docs (free), and email. Everything works on free tiers. No paid tools required.'},{q:'How long does setup take?',a:'The delivery SOP takes about 4 hours to set up the first time. After that, you run it for every client automatically.'},{q:'Is there a refund?',a:'Digital products are non-refundable once downloaded. If files are corrupted, contact us and we will resolve it immediately.'}]
+const stats=[{s:'24hrs',l:'From idea to launch-ready offer'},{s:'3',l:'Complete offer templates'},{s:'8',l:'AI sales script prompts'},{s:'4',l:'Stage delivery system'}]
+
+const e = React.createElement
+
+const steps = [
+  {n:'01',t:'Choose Your Offer',d:'Pick from 3 pre-built service packages. Project, done-for-you, or retainer.'},
+  {n:'02',t:'Customize and Build',d:'Fill in your details. Set scope, price, and timeline. Build the delivery system.'},
+  {n:'03',t:'Write the Sales Script',d:'Use AI prompts to write your pitch, outreach, and follow-up scripts.'},
+  {n:'04',t:'Soft Launch',d:'Send your offer to 10-20 people. Get feedback. Make adjustments.'},
+  {n:'05',t:'Get First Clients',d:'Manage inquiries, contracts, and delivery via the client workflow system.'},
+]
+
+export default function App(){
+  const [o,setO] = useState<number|null>(null)
+  return e('div',{style:{background:BG,color:W,fontFamily:'Georgia,serif',minHeight:'100vh'}},
+    e('nav',{style:{background:'rgba(15,10,26,0.95)',backdropFilter:'blur(12px)',borderBottom:'1px solid rgba(251,191,36,0.12)',position:'sticky',top:0,zIndex:100}},
+      e('div',{style:{maxWidth:1100,margin:'0 auto',padding:'14px 24px',display:'flex',justifyContent:'space-between',alignItems:'center'}},
+        e('div',{style:{display:'flex',alignItems:'center',gap:10}},
+          e('div',{style:{width:34,height:34,borderRadius:8,background:'linear-gradient(135deg,#7c3aed,#fbbf24)',display:'flex',alignItems:'center',justifyContent:'center',fontSize:16,fontWeight:900,color:W}},'A'),
+          e('span',{style:{fontWeight:700,fontSize:18}},'Agency Starter Kit ',e('span',{style:{color:GD}},'AI'))
+        ),
+        e('div',{style:{display:'flex',gap:32,alignItems:'center'}},
+          [['Inside','inside'],['System','system'],['Pricing','pricing'],['FAQ','faq']].map(([l,id])=>e('a',{key:l,href:'#'+id,style:{color:GY,textDecoration:'none',fontSize:14,fontFamily:'system-ui,sans-serif'}},l)),
+          e('a',{href:'#pricing',style:{background:GD,color:'#1a0f2e',padding:'8px 20px',borderRadius:8,textDecoration:'none',fontWeight:700,fontSize:14,fontFamily:'system-ui,sans-serif'}},'Get the Kit')
+        )
+      )
+    ),
+    e('section',{style:{maxWidth:1100,margin:'0 auto',padding:'80px 24px 60px',display:'grid',gridTemplateColumns:'1fr 1fr',gap:60,alignItems:'center'}},
+      e('div',null,
+        e('div',{style:{display:'inline-flex',alignItems:'center',gap:8,backgroundColor:'rgba(251,191,36,0.1)',border:'1px solid rgba(251,191,36,0.25)',borderRadius:100,padding:'6px 14px',marginBottom:24}},
+          e('span',{style:{fontSize:14,color:GD,fontWeight:600,fontFamily:'system-ui,sans-serif'}},'\u26a1 3 Offers. 8 Scripts. 24 Hours.')),
+        e('h1',{style:{fontSize:48,fontWeight:900,lineHeight:1.1,letterSpacing:'-1.5px',marginBottom:20}},'Launch Your Agency',e('br',null),e('span',{style:{color:GD}},'in 24 Hours.')),
+        e('p',{style:{fontSize:19,color:GY,lineHeight:1.7,marginBottom:12,fontFamily:'system-ui,sans-serif'}},'A complete service offer — pre-built templates, sales scripts, delivery system, and client workflow — ready to launch in 24 hours.'),
+        e('p',{style:{fontSize:14,color:GY2,marginBottom:36,fontFamily:'system-ui,sans-serif'}},'For creators, consultants, and operators who have a skill and want to sell it as a service.'),
+        e('a',{href:'#pricing',style:{background:GD,color:'#1a0f2e',padding:'14px 32px',borderRadius:10,textDecoration:'none',fontWeight:800,fontSize:16,display:'inline-block',boxShadow:'0 4px 20px rgba(251,191,36,0.3)'}},'Get Instant Access \u2014 From $27'),
+        e('div',{style:{display:'flex',gap:24,marginTop:24,flexWrap:'wrap'}},
+          ['3 offer templates ready to launch','8 AI sales script prompts','4-stage delivery system','Notion CRM setup included'].map(b=>e('div',{key:b,style:{display:'flex',alignItems:'center',gap:6}},
+            e('span',{style:{color:GD,fontSize:13}},'\u2713'),
+            e('span',{style:{color:GY,fontSize:13,fontFamily:'system-ui,sans-serif'}},b)
+          ))
+        )
+      ),
+      e('div',{style:{backgroundColor:BG2,borderRadius:20,padding:28,border:'1px solid rgba(251,191,36,0.2)',boxShadow:'0 8px 40px rgba(251,191,36,0.08)'}},
+        e('div',{style:{marginBottom:16,fontSize:13,color:GD,fontWeight:700,fontFamily:'system-ui,sans-serif',letterSpacing:'0.5px'}},'THE 24-HOUR LAUNCH PLAN'),
+        steps.map(p=>e('div',{key:p.n,style:{display:'flex',gap:12,marginBottom:10}},
+          e('div',{style:{width:32,height:32,borderRadius:8,backgroundColor:V3,display:'flex',alignItems:'center',justifyContent:'center',fontWeight:800,fontSize:11,color:W,flexShrink:0,fontFamily:'system-ui,sans-serif'}},p.n),
+          e('div',{style:{flex:1,paddingBottom:10}},
+            e('div',{style:{fontSize:13,fontWeight:700,marginBottom:2,color:W,fontFamily:'system-ui,sans-serif'}},p.t),
+            e('div',{style:{fontSize:12,color:GY,lineHeight:1.5,fontFamily:'system-ui,sans-serif'}},p.d)
+          )
+        )),
+        e('div',{style:{marginTop:14,backgroundColor:'rgba(251,191,36,0.08)',borderRadius:8,padding:'10px 14px',border:'1px solid rgba(251,191,36,0.2)'}},
+          e('div',{style:{fontSize:12,color:GD,fontWeight:600,fontFamily:'system-ui,sans-serif'}},'Result: Launch-ready service offer'),
+          e('div',{style:{fontSize:12,color:GY2,fontFamily:'system-ui,sans-serif',marginTop:2}},'Clients can buy. You know how to deliver. You are live.')
+        )
+      )
+    ),
+    e('section',{style:{borderTop:'1px solid rgba(251,191,36,0.08)',borderBottom:'1px solid rgba(251,191,36,0.08)',backgroundColor:BG2}},
+      e('div',{style:{maxWidth:1100,margin:'0 auto',padding:'20px 24px',display:'flex',justifyContent:'space-around',flexWrap:'wrap',gap:16}},
+        stats.map(i=>e('div',{key:i.l,style:{textAlign:'center'}},
+          e('div',{style:{fontSize:28,fontWeight:900,color:GD,fontFamily:'system-ui,sans-serif'}},i.s),
+          e('div',{style:{fontSize:12,color:GY,marginTop:4,fontFamily:'system-ui,sans-serif'}},i.l)
+        ))
+      )
+    ),
+    e('section',{id:'inside',style:{backgroundColor:BG2,borderTop:'1px solid rgba(251,191,36,0.06)'}},
+      e('div',{style:{maxWidth:1100,margin:'0 auto',padding:'80px 24px'}},
+        e('div',{style:{textAlign:'center',marginBottom:56}},
+          e('h2',{style:{fontSize:40,fontWeight:900,marginBottom:16,letterSpacing:'-1px'}},'5 Files. 3 Offers. 1 Launch System.'),
+          e('p',{style:{color:GY,fontSize:18,fontFamily:'system-ui,sans-serif'}},'Everything you need to package your skill as a sellable service and launch it in 24 hours.')
+        ),
+        e('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:48}},
+          e('div',null,
+            files.map((f,i)=>e('div',{key:f.n,style:{backgroundColor:BG,borderRadius:12,padding:20,marginBottom:12,border:'1px solid rgba(251,191,36,0.08)',display:'flex',gap:16,alignItems:'flex-start'}},
+              e('div',{style:{width:40,height:40,borderRadius:8,backgroundColor:'rgba(124,58,237,0.15)',border:'1px solid rgba(124,58,237,0.3)',display:'flex',alignItems:'center',justifyContent:'center',fontWeight:900,color:GD,fontSize:14,flexShrink:0,fontFamily:'system-ui,sans-serif'}},String(i+1).padStart(2,'0')),
+              e('div',null,
+                e('div',{style:{fontWeight:700,fontSize:14,marginBottom:4,fontFamily:'system-ui,sans-serif',color:W}},f.n),
+                e('div',{style:{color:GY,fontSize:12,marginBottom:4,fontFamily:'system-ui,sans-serif'}},f.d),
+                e('div',{style:{color:GD,fontSize:11,fontFamily:'system-ui,sans-serif'}},f.s)
+              )
+            ))
+          ),
+          e('div',null,
+            e('div',{style:{background:'linear-gradient(135deg,#1a0f2e,#2d1b69)',borderRadius:16,padding:32,border:'1px solid rgba(251,191,36,0.25)',marginBottom:24}},
+              e('div',{style:{fontSize:13,color:GD,fontWeight:700,marginBottom:12,fontFamily:'system-ui,sans-serif',letterSpacing:'0.5px',textTransform:'uppercase'}},'The Transformation'),
+              e('h3',{style:{fontSize:24,fontWeight:900,marginBottom:16,color:GY}},'Old: Weeks of planning, no launch'),
+              e('p',{style:{color:GY2,fontSize:15,lineHeight:1.7,marginBottom:16,fontFamily:'system-ui,sans-serif'}},'You spend weeks writing a business plan, researching competitors, designing a logo. You still have no offer and no clients. The planning loop never ends.'),
+              e('div',{style:{display:'flex',alignItems:'center',gap:10,marginBottom:16}},
+                e('div',{style:{flex:1,height:1,backgroundColor:'rgba(251,191,36,0.3)'}}),
+                e('span',{style:{color:GD,fontSize:18}},'\u2192'),
+                e('div',{style:{flex:1,height:1,backgroundColor:'rgba(251,191,36,0.3)'}})
+              ),
+              e('h3',{style:{fontSize:24,fontWeight:900,color:GD}},'New: Launch in 24 hours, get clients'),
+              e('p',{style:{color:GY2,fontSize:15,lineHeight:1.7,fontFamily:'system-ui,sans-serif'}},'Pick an offer template, customize it, write the sales script, send it to 10-20 people. You are live in 24 hours. First clients within the week.')
+            ),
+            e('div',{style:{backgroundColor:BG,borderRadius:12,padding:20,border:'1px solid rgba(251,191,36,0.1)'}},
+              e('div',{style:{fontSize:13,color:GD,fontWeight:700,marginBottom:12,fontFamily:'system-ui,sans-serif'}},'WHO THIS IS FOR'),
+              e('p',{style:{color:GY,fontSize:14,lineHeight:1.7,fontFamily:'system-ui,sans-serif'}},'Coaches, consultants, writers, designers, developers, automation specialists. Anyone with a skill they can package as a service. No website required. No business name needed.')
+            )
+          )
+        )
+      )
+    ),
+    e('section',{id:'system',style:{maxWidth:900,margin:'0 auto',padding:'80px 24px',textAlign:'center'}},
+      e('h2',{style:{fontSize:40,fontWeight:900,marginBottom:16,letterSpacing:'-1px'}},'The 4-Stage Launch System'),
+      e('p',{style:{color:GY,fontSize:18,marginBottom:56,fontFamily:'system-ui,sans-serif'}},'From idea to launch-ready service offer. Every stage covered.'),
+      e('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr 1fr 1fr',gap:12}},
+        stages.map(s=>e('div',{key:s.n,style:{backgroundColor:BG2,borderRadius:16,padding:24,border:'1px solid rgba(251,191,36,0.1)',textAlign:'center'}},
+          e('div',{style:{width:40,height:40,borderRadius:'50%',backgroundColor:V3,display:'flex',alignItems:'center',justifyContent:'center',fontWeight:900,fontSize:16,color:W,margin:'0 auto 12px',fontFamily:'system-ui,sans-serif'}},s.n),
+          e('h3',{style:{fontSize:16,fontWeight:800,marginBottom:8,fontFamily:'system-ui,sans-serif',color:GD}},s.t),
+          e('p',{style:{color:GY,fontSize:12,lineHeight:1.6,fontFamily:'system-ui,sans-serif'}},s.d)
+        ))
+      )
+    ),
+    e('section',{style:{backgroundColor:BG2,borderTop:'1px solid rgba(251,191,36,0.06)'}},
+      e('div',{style:{maxWidth:1100,margin:'0 auto',padding:'80px 24px'}},
+        e('div',{style:{textAlign:'center',marginBottom:56}},
+          e('h2',{style:{fontSize:40,fontWeight:900,letterSpacing:'-1px',marginBottom:16}},'What the Kit Gives You'),
+          e('p',{style:{color:GY,fontSize:18,fontFamily:'system-ui,sans-serif'}},'Six components that make up the complete agency launch system.')
+        ),
+        e('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr 1fr',gap:20}},
+          feat.map(f=>e('div',{key:f.t,style:{backgroundColor:BG,borderRadius:14,padding:24,border:'1px solid rgba(251,191,36,0.1)'}},
+            e('div',{style:{fontSize:11,color:GD,fontWeight:700,marginBottom:8,fontFamily:'system-ui,sans-serif',letterSpacing:'1px'}},f.i),
+            e('h3',{style:{fontWeight:800,fontSize:15,marginBottom:8,color:W}},f.t),
+            e('p',{style:{color:GY,fontSize:13,lineHeight:1.6}},f.d)
+          ))
+        )
+      )
+    ),
+    e('section',{id:'pricing',style:{maxWidth:900,margin:'0 auto',padding:'80px 24px'}},
+      e('div',{style:{textAlign:'center',marginBottom:56}},
+        e('h2',{style:{fontSize:44,fontWeight:900,letterSpacing:'-1.5px',marginBottom:16}},'One System. Two Tiers.'),
+        e('p',{style:{color:GY,fontSize:18,fontFamily:'system-ui,sans-serif'}},'Build your agency offer in 24 hours. Launch it this week.')
+      ),
+      e('div',{style:{display:'grid',gridTemplateColumns:'1fr 1fr',gap:24,maxWidth:800,margin:'0 auto'}},
+        e('div',{style:{backgroundColor:BG2,borderRadius:20,padding:36,border:'1px solid rgba(251,191,36,0.15)'}},
+          e('div',{style:{fontSize:13,color:GY,fontWeight:700,textTransform:'uppercase',letterSpacing:'0.5px',marginBottom:12,fontFamily:'system-ui,sans-serif'}},'Starter'),
+          e('div',{style:{display:'flex',alignItems:'baseline',gap:8,marginBottom:20}},
+            e('span',{style:{fontSize:52,fontWeight:900}},'$27'),
+            e('span',{style:{color:GY,fontSize:15}},'one-time')
+          ),
+          e('p',{style:{color:GY,fontSize:14,marginBottom:28,lineHeight:1.6,fontFamily:'system-ui,sans-serif'}},'The complete launch kit. 3 offer templates, 8 sales scripts, delivery SOP, and the 24-hour launch plan.'),
+          e('ul',{style:{listStyle:'none',padding:0,marginBottom:32}},starter.map(item=>e('li',{key:item,style:{display:'flex',gap:10,marginBottom:12,fontSize:14,alignItems:'flex-start'}},
+            e('span',{style:{color:GD,flexShrink:0,fontWeight:700}},'\u2713'),
+            e('span',{style:{color:W}},item)
+          ))),
+          e('a',{href:'#',style:{display:'block',textAlign:'center',backgroundColor:'rgba(251,191,36,0.1)',color:GD,padding:'14px',borderRadius:10,textDecoration:'none',fontWeight:700,fontSize:15,border:'1px solid rgba(251,191,36,0.25)',fontFamily:'system-ui,sans-serif'}},'Get the Agency Starter Kit')
+        ),
+        e('div',{style:{backgroundColor:'rgba(251,191,36,0.06)',borderRadius:20,padding:36,border:'2px solid rgba(251,191,36,0.4)',position:'relative',boxShadow:'0 8px 40px rgba(251,191,36,0.1)'}},
+          e('div',{style:{position:'absolute',top:-14,left:24,backgroundColor:GD,color:'#1a0f2e',padding:'4px 14px',borderRadius:100,fontWeight:800,fontSize:12,fontFamily:'system-ui,sans-serif'}},'FULL SYSTEM'),
+          e('div',{style:{fontSize:13,color:GD,fontWeight:700,textTransform:'uppercase',letterSpacing:'0.5px',marginBottom:12,fontFamily:'system-ui,sans-serif'}},'Complete'),
+          e('div',{style:{display:'flex',alignItems:'baseline',gap:8,marginBottom:20}},
+            e('span',{style:{fontSize:52,fontWeight:900,color:W}},'$47'),
+            e('span',{style:{color:GY2,fontSize:15}},'one-time')
+          ),
+          e('p',{style:{color:GY2,fontSize:14,marginBottom:28,lineHeight:1.6,fontFamily:'system-ui,sans-serif'}},'Starter plus the full client workflow system: Notion CRM, proposal and contract templates, and financial tracking.'),
+          e('ul',{style:{listStyle:'none',padding:0,marginBottom:32}},complete.map(item=>e('li',{key:item,style:{display:'flex',gap:10,marginBottom:12,fontSize:14,alignItems:'flex-start'}},
+            e('span',{style:{color:GD,flexShrink:0,fontWeight:700}},'\u2713'),
+            e('span',{style:{color:W}},item)
+          ))),
+          e('a',{href:'#',style:{display:'block',textAlign:'center',backgroundColor:GD,color:'#1a0f2e',padding:'14px',borderRadius:10,textDecoration:'none',fontWeight:700,fontSize:15,fontFamily:'system-ui,sans-serif'}},'Get the Complete System')
+        )
+      ),
+      e('p',{style:{textAlign:'center',color:GY,fontSize:13,marginTop:24,fontFamily:'system-ui,sans-serif'}},'Instant download. Files are yours to keep. No subscriptions.')
+    ),
+    e('section',{id:'faq',style:{maxWidth:800,margin:'0 auto',padding:'0 24px 80px'}},
+      e('div',{style:{textAlign:'center',marginBottom:48}},
+        e('h2',{style:{fontSize:40,fontWeight:900}},'Questions. Answered.')
+      ),
+      e('div',null,
+        faqs.map((faq,i)=>e('div',{key:i,style:{borderBottom:'1px solid rgba(251,191,36,0.1)'}},
+          e('button',{onClick:()=>setO(o===i?null:i),style:{width:'100%',background:'none',border:'none',color:W,padding:'20px 0',display:'flex',justifyContent:'space-between',alignItems:'center',cursor:'pointer',fontSize:16,fontWeight:600,textAlign:'left',gap:16,fontFamily:'system-ui,sans-serif'}},
+            faq.q,
+            e('span',{style:{color:GD,fontSize:20,flexShrink:0}},o===i?'\u2212':'+')
+          ),
+          o===i&&e('div',{style:{paddingBottom:20,color:GY,fontSize:15,lineHeight:1.7,fontFamily:'system-ui,sans-serif'}},faq.a)
+        ))
+      )
+    ),
+    e('section',{style:{background:'linear-gradient(135deg,#0f0a1a,#1a0f2e)',borderTop:'1px solid rgba(251,191,36,0.06)',textAlign:'center',padding:'80px 24px'}},
+      e('div',{style:{maxWidth:600,margin:'0 auto'}},
+        e('div',{style:{fontSize:48,marginBottom:20}},'\u2699\ufe0f'),
+        e('h2',{style:{fontSize:40,fontWeight:900,marginBottom:16,letterSpacing:'-1px',color:W}},'Your Agency Starts Today.'),
+        e('p',{style:{color:GY,fontSize:18,lineHeight:1.6,marginBottom:40,fontFamily:'system-ui,sans-serif'}},'24-hour launch. 3 offer templates. 8 sales scripts. Start with what you have.'),
+        e('a',{href:'#pricing',style:{backgroundColor:GD,color:'#1a0f2e',padding:'16px 40px',borderRadius:12,textDecoration:'none',fontWeight:900,fontSize:18,display:'inline-block',fontFamily:'system-ui,sans-serif',boxShadow:'0 4px 30px rgba(251,191,36,0.35)'}},'Get Instant Access \u2014 From $27'),
+        e('p',{style:{color:GY2,fontSize:13,marginTop:16}},'One-time purchase. Instant download. No subscriptions.')
+      )
+    ),
+    e('footer',{style:{borderTop:'1px solid rgba(251,191,36,0.05)',padding:'24px',textAlign:'center',color:GY,fontSize:12,fontFamily:'system-ui,sans-serif'}},
+      e('div',{style:{maxWidth:1100,margin:'0 auto'}},
+        e('p',null,'2026 AI Microtec. Personal use only. Not for resale.'),
+        e('p',{style:{marginTop:8}},'The AI Agency Starter Kit \u2014 Launch a Service Offer in 24 Hours')
+      )
+    )
+  )
+}
